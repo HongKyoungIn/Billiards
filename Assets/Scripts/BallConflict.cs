@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BallConflict : MonoBehaviour {
-    (Vector2, Vector2) calculateBall2BallCollision(Vector2 v1, Vector2 v2, Vector2 c1, Vector2 c2, float e = 1f) {
+    (Vector2, Vector2) calculateBall2BallCollision(Vector2 v1, Vector2 v2, Vector2 c1, Vector2 c2, float e = 0.5f) {
         Vector2 basisX = (c2 - c1).normalized;
         Vector2 basisY = Vector2.Perpendicular(basisX);
 
@@ -14,11 +14,14 @@ public class BallConflict : MonoBehaviour {
             cos1 = 1;
         }
         else {
-            float dotProduct = Vector2.Dot(v1, basisX);
-            cos1 = dotProduct / v1.magnitude;
+            cos1 = Vector2.Dot(v1, basisX) / v1.magnitude;
             Vector3 cross = Vector3.Cross(v1, basisX);
-            float crossMagnitude = cross.magnitude / v1.magnitude;
-            sin1 = cross.z > 0 ? Mathf.Min(crossMagnitude, 1f) : -Mathf.Min(crossMagnitude, 1f); // NaN 방지
+            if(cross.z > 0) {
+                sin1 = cross.magnitude / v1.magnitude;
+            }
+            else {
+                sin1 = -cross.magnitude / v1.magnitude;
+            }
         }
 
         if (v2.magnitude < 0.0001f) {
@@ -26,15 +29,18 @@ public class BallConflict : MonoBehaviour {
             cos2 = 1;
         }
         else {
-            float dotProduct = Vector2.Dot(v2, basisX);
-            cos2 = dotProduct / v2.magnitude;
+            cos2 = Vector2.Dot(v2, basisX) / v2.magnitude;
             Vector3 cross = Vector3.Cross(v2, basisX);
-            float crossMagnitude = cross.magnitude / v2.magnitude;
-            sin2 = cross.z > 0 ? Mathf.Min(crossMagnitude, 1f) : -Mathf.Min(crossMagnitude, 1f); // NaN 방지
+            if (cross.z > 0) {
+                sin2 = cross.magnitude / v2.magnitude;
+            }
+            else {
+                sin2 = -cross.magnitude / v2.magnitude;
+            }
         }
 
         Vector2 u1, u2;
-        u1 = ((1 - e) * v1.magnitude * cos1 + (1 * e) * v2.magnitude * cos2) / 2 * basisX - v1.magnitude * sin1 * basisY;
+        u1 = ((1 - e) * v1.magnitude * cos1 + (1 + e) * v2.magnitude * cos2) / 2 * basisX - v1.magnitude * sin1 * basisY;
         u2 = ((1 + e) * v1.magnitude * cos1 + (1 - e) * v2.magnitude * cos2) / 2 * basisX - v2.magnitude * sin2 * basisY;
 
         return (u1, u2);
@@ -50,5 +56,14 @@ public class BallConflict : MonoBehaviour {
 
             (ball1RB.velocity, ball2RB.velocity) = calculateBall2BallCollision(v1, v2, ball1RB.position, ball2RB.position);
         }
+    }
+    void Start() {
+        Rigidbody2D ballRB = gameObject.GetComponent<Rigidbody2D>();
+        ballRB.drag = 0.3f; // 마찰력 설정
+    }
+
+    void Update() {
+        Rigidbody2D ballRB = gameObject.GetComponent<Rigidbody2D>();
+        ballRB.velocity *= 0.9999f; // 속도 감소 (0.99는 감소 비율을 의미합니다)
     }
 }

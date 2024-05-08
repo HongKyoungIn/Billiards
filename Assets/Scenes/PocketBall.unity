@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 295837951}
   - component: {fileID: 295837950}
   - component: {fileID: 295837949}
+  - component: {fileID: 295837954}
   m_Layer: 0
   m_Name: BlueBall
   m_TagString: Ball
@@ -315,7 +316,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &295837951
 CircleCollider2D:
@@ -419,6 +420,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &295837954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295837948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9484345aa115a6342aba406fb271fd5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &381541079
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,6 +445,7 @@ GameObject:
   - component: {fileID: 381541082}
   - component: {fileID: 381541081}
   - component: {fileID: 381541080}
+  - component: {fileID: 381541085}
   m_Layer: 0
   m_Name: OrangeBall
   m_TagString: Ball
@@ -478,7 +492,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &381541082
 CircleCollider2D:
@@ -582,6 +596,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &381541085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381541079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9484345aa115a6342aba406fb271fd5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &407035075
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +621,7 @@ GameObject:
   - component: {fileID: 407035078}
   - component: {fileID: 407035077}
   - component: {fileID: 407035076}
+  - component: {fileID: 407035081}
   m_Layer: 0
   m_Name: BlackBall
   m_TagString: Ball
@@ -641,7 +668,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &407035078
 CircleCollider2D:
@@ -745,6 +772,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &407035081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 407035075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9484345aa115a6342aba406fb271fd5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &417202976
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,6 +797,7 @@ GameObject:
   - component: {fileID: 417202979}
   - component: {fileID: 417202978}
   - component: {fileID: 417202977}
+  - component: {fileID: 417202982}
   m_Layer: 0
   m_Name: PurpleBall
   m_TagString: Ball
@@ -804,7 +844,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &417202979
 CircleCollider2D:
@@ -908,6 +948,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &417202982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417202976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9484345aa115a6342aba406fb271fd5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &515058296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,6 +1236,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74887d5421b0524c8603599d1c89c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &524306498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 524306499}
+  - component: {fileID: 524306500}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &524306499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524306498}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &524306500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524306498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bfb600e3ceee1747afc61428158e132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whiteBallNum: 0
+  blackBall: 0
+  colorBalls:
+  - {fileID: 1776269675}
+  - {fileID: 295837948}
+  - {fileID: 1764828271}
+  - {fileID: 417202976}
+  - {fileID: 407035075}
+  - {fileID: 381541079}
+  - {fileID: 533584510}
+  - {fileID: 1826461739}
+  - {fileID: 1289241910}
+  - {fileID: 1747729082}
+  launch: {fileID: 2005857978}
 --- !u!1 &533584510
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,6 +1307,7 @@ GameObject:
   - component: {fileID: 533584513}
   - component: {fileID: 533584512}
   - component: {fileID: 533584511}
+  - component: {fileID: 533584516}
   m_Layer: 0
   m_Name: GreenBall
   m_TagString: Ball
@@ -1243,7 +1354,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &533584513
 CircleCollider2D:
@@ -1322,7 +1433,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 0.5019608, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.39215687, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1347,6 +1458,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &533584516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533584510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9484345aa115a6342aba406fb271fd5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &679795872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1922,6 +2045,7 @@ GameObject:
   - component: {fileID: 1289241913}
   - component: {fileID: 1289241912}
   - component: {fileID: 1289241911}
+  - component: {fileID: 1289241916}
   m_Layer: 0
   m_Name: LightGreenBall
   m_TagString: Ball
@@ -1968,7 +2092,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &1289241913
 CircleCollider2D:
@@ -2072,6 +2196,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1289241916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289241910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9484345aa115a6342aba406fb271fd5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1387568862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2813,6 +2949,7 @@ GameObject:
   - component: {fileID: 1747729085}
   - component: {fileID: 1747729084}
   - component: {fileID: 1747729083}
+  - component: {fileID: 1747729088}
   m_Layer: 0
   m_Name: MintBall
   m_TagString: Ball
@@ -2859,7 +2996,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &1747729085
 CircleCollider2D:
@@ -2963,6 +3100,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1747729088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747729082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9484345aa115a6342aba406fb271fd5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1764828271
 GameObject:
   m_ObjectHideFlags: 0
@@ -2976,6 +3125,7 @@ GameObject:
   - component: {fileID: 1764828274}
   - component: {fileID: 1764828273}
   - component: {fileID: 1764828272}
+  - component: {fileID: 1764828277}
   m_Layer: 0
   m_Name: YellowBall
   m_TagString: Ball
@@ -3022,7 +3172,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &1764828274
 CircleCollider2D:
@@ -3126,6 +3276,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1764828277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764828271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9484345aa115a6342aba406fb271fd5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1776269675
 GameObject:
   m_ObjectHideFlags: 0
@@ -3139,6 +3301,7 @@ GameObject:
   - component: {fileID: 1776269678}
   - component: {fileID: 1776269677}
   - component: {fileID: 1776269676}
+  - component: {fileID: 1776269681}
   m_Layer: 0
   m_Name: RedBall
   m_TagString: Ball
@@ -3185,7 +3348,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &1776269678
 CircleCollider2D:
@@ -3289,6 +3452,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1776269681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776269675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9484345aa115a6342aba406fb271fd5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1826461739
 GameObject:
   m_ObjectHideFlags: 0
@@ -3302,6 +3477,7 @@ GameObject:
   - component: {fileID: 1826461742}
   - component: {fileID: 1826461741}
   - component: {fileID: 1826461740}
+  - component: {fileID: 1826461745}
   m_Layer: 0
   m_Name: PinkBall
   m_TagString: Ball
@@ -3348,7 +3524,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &1826461742
 CircleCollider2D:
@@ -3452,6 +3628,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1826461745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826461739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9484345aa115a6342aba406fb271fd5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1829806852
 GameObject:
   m_ObjectHideFlags: 0
@@ -3587,7 +3775,7 @@ MonoBehaviour:
   rotationSpeed: 50
   whiteBall: {fileID: 2795305154277267723, guid: 145c82c241a75d7499abce16af3b8bd8, type: 3}
   launchPos: {fileID: 1829806853}
-  ballSpeed: 30
+  ballSpeed: 20
 --- !u!58 &2005857979
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3652,3 +3840,4 @@ SceneRoots:
   - {fileID: 1826461744}
   - {fileID: 1289241915}
   - {fileID: 1747729087}
+  - {fileID: 524306499}

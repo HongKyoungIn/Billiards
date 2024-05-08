@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/PocketBall.unity
+    guid: a29545e0461900e4da430de486ceee4e
+  - enabled: 1
+    path: Assets/Scenes/ThreeCushion.unity
+    guid: 66eac7e107793bf4fb11c6908369f4d8
   m_configObjects: {}

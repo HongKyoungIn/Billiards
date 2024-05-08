@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ball
   - Wall
+  - ColorBall
   layers:
   - Default
   - TransparentFX
@@ -42,4 +43,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackGround
+    uniqueID: 3963381119
+    locked: 0
+  - name: MiddleGruond
+    uniqueID: 3405651075
+    locked: 0
+  - name: FowradGround
+    uniqueID: 1369796665
     locked: 0

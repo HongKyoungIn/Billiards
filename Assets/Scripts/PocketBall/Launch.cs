@@ -8,7 +8,9 @@ public class Launch : MonoBehaviour {
     public GameObject whiteBall;
     public Transform launchPos;
     public float ballSpeed = 10f;
-    public LineRenderer lineRenderer; // LineRenderer 참조
+
+    // whiteBall의 개수를 추적하기 위한 정적 변수
+    private int whiteBallCount = 0;
 
     void Update() {
         zRotation += Input.GetAxisRaw("Vertical") * Time.deltaTime * rotationSpeed;
@@ -19,25 +21,14 @@ public class Launch : MonoBehaviour {
             GameObject ball = Instantiate(whiteBall, launchPos.position, Quaternion.Euler(Vector3.zero));
             Vector2 startVelocity = new Vector2(ballSpeed * Mathf.Cos(zRotation * Mathf.Deg2Rad), ballSpeed * Mathf.Sin(zRotation * Mathf.Deg2Rad));
             ball.GetComponent<BallStart>().startVelocity = startVelocity;
-            PredictPath(startVelocity);
+
+            // whiteBallCount를 증가시킴
+            whiteBallCount++;
+            Debug.Log(whiteBallCount);
         }
     }
 
-    void PredictPath(Vector2 startVelocity) {
-        Vector2 currentPosition = launchPos.position;
-        Vector2 direction = startVelocity.normalized;
-        float distance = 1f; // 예측 선의 길이, 필요에 따라 조정
-        RaycastHit2D hit = Physics2D.Raycast(currentPosition, direction, distance);
-        
-        lineRenderer.positionCount = 2; // 시작점과 끝점 또는 충돌 지점
-        lineRenderer.SetPosition(0, currentPosition);
-        
-        if (hit.collider != null) {
-            // 충돌 지점이 있으면, 그 지점까지 선을 그린다.
-            lineRenderer.SetPosition(1, hit.point);
-        } else {
-            // 충돌 지점이 없으면, 예측된 거리만큼 선을 그린다.
-            lineRenderer.SetPosition(1, currentPosition + direction * distance);
-        }
+    public int GetBallCount() {
+        return whiteBallCount;
     }
 }
