@@ -1,0 +1,3 @@
+2차원 충돌 후의 물체의 속력 계산
+https://saegil.tistory.com/649
+

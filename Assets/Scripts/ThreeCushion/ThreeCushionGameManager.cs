@@ -6,6 +6,7 @@ public class ThreeCushionGameManager : MonoBehaviour {
     public static List<GameObject> selectedWalls = new List<GameObject>(); // 수정: 클래스 레벨의 static 리스트 사용
 
     void Start() {
+        Time.timeScale = 1;
         SelectRandomWalls();
     }
 
